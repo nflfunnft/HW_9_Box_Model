@@ -8,26 +8,32 @@ body {
     font-family: Arial, sans-serif;
     background: var(--bg-main);
     color: #FFFFFF;
-    padding: 40px;
+    padding: 60px 20px;
 }
 
+/* КОНТЕЙНЕР ДЛЯ ВИРІВНЮВАННЯ ПО ЛІВОМУ КРАЮ РАМКИ */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: left;
+    /* Тексти зверху та знизу тепер зліва */
+}
+
+/* HEADER */
 .header {
-    text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .header__title {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 400;
 }
 
-/* КОНТЕЙНЕР (СІТКА) */
+/* СІТКА ПРОГНОЗУ */
 .forecast {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     font-size: 0;
     /* Прибирає пробіли між inline-block */
-    /* Зовнішня рамка контейнера (зверху та зліва) */
     border-top: var(--border-width) solid var(--border-color);
     border-left: var(--border-width) solid var(--border-color);
     background: var(--bg-container);
@@ -39,14 +45,14 @@ body {
     vertical-align: top;
     font-size: 16px;
     text-align: center;
-    padding: 30px 10px;
-    /* Кожна картка додає рамку справа та знизу */
+    /* Текст всередині карток залишається по центру */
+    padding: 40px 10px;
     border-right: var(--border-width) solid var(--border-color);
     border-bottom: var(--border-width) solid var(--border-color);
     background-clip: padding-box;
 }
 
-/* РОЗМІРИ */
+/* ШИРИНИ КАРТОК */
 .forecast__item--full {
     width: 100%;
 }
@@ -59,32 +65,40 @@ body {
     width: 25%;
 }
 
-/* ЕЛЕМЕНТИ ВСЕРЕДИНІ КАРТКИ */
+/* ТЕКСТ ВСЕРЕДИНІ КАРТОК */
 .forecast__city {
     display: block;
-    /* Назва міста займає весь верхній рядок */
-    font-size: 20px;
+    /* Місто зверху */
+    font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 15px;
     font-weight: 400;
-    width: 100%;
 }
 
 .forecast__temp {
     display: inline-block;
-    /* Стає в ряд з іконкою */
+    /* Градуси в ряд з іконкою */
     vertical-align: middle;
-    font-size: 36px;
+    font-size: 38px;
     font-weight: 300;
     margin-right: 12px;
-    /* Відступ між цифрами та іконкою */
 }
 
 .forecast__icon {
     display: inline-block;
-    /* Стає в ряд з температурою */
+    /* Іконка в ряд з градусами */
     vertical-align: middle;
     font-size: 42px;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 25px;
+}
+
+.footer__text {
+    font-size: 18px;
+    font-weight: 300;
 }
 
 /* КОЛЬОРИ МІСТ */
@@ -130,18 +144,4 @@ body {
 
 .forecast__item--sydney {
     background-color: var(--color-sydney);
-}
-
-.footer {
-    max-width: 1200px;
-    margin: 40px auto 0;
-    /* Центрування та відступ зверху */
-    text-align: center;
-}
-
-.footer__text {
-    font-size: 18px;
-    font-weight: 300;
-    font-style: italic;
-    opacity: 0.9;
 }
