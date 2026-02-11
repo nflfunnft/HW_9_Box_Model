@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-main);
+    color: #FFFFFF;
+    padding: 40px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header__title {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+/* КОНТЕЙНЕР (СІТКА) */
+.forecast {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0;
+    /* Прибирає пробіли між inline-block */
+    /* Зовнішня рамка контейнера (зверху та зліва) */
+    border-top: var(--border-width) solid var(--border-color);
+    border-left: var(--border-width) solid var(--border-color);
+    background: var(--bg-container);
+}
+
+/* КАРТКА */
+.forecast__item {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    text-align: center;
+    padding: 30px 10px;
+    /* Кожна картка додає рамку справа та знизу */
+    border-right: var(--border-width) solid var(--border-color);
+    border-bottom: var(--border-width) solid var(--border-color);
+    background-clip: padding-box;
+}
+
+/* РОЗМІРИ */
+.forecast__item--full {
+    width: 100%;
+}
+
+.forecast__item--half {
+    width: 50%;
+}
+
+.forecast__item--quarter {
+    width: 25%;
+}
+
+/* ЕЛЕМЕНТИ ВСЕРЕДИНІ КАРТКИ */
+.forecast__city {
+    display: block;
+    /* Назва міста займає весь верхній рядок */
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.forecast__temp {
+    display: inline-block;
+    /* Стає в ряд з іконкою */
+    vertical-align: middle;
+    font-size: 36px;
+    font-weight: 300;
+    margin-right: 12px;
+    /* Відступ між цифрами та іконкою */
+}
+
+.forecast__icon {
+    display: inline-block;
+    /* Стає в ряд з температурою */
+    vertical-align: middle;
+    font-size: 42px;
+}
+
+/* КОЛЬОРИ МІСТ */
+.forecast__item--lisbon {
+    background-color: var(--color-lisbon);
+}
+
+.forecast__item--paris {
+    background-color: var(--color-paris);
+}
+
+.forecast__item--belgrade {
+    background-color: var(--color-belgrade);
+}
+
+.forecast__item--venice {
+    background-color: var(--color-venice);
+}
+
+.forecast__item--telaviv {
+    background-color: var(--color-telaviv);
+}
+
+.forecast__item--cair {
+    background-color: var(--color-cair);
+}
+
+.forecast__item--newyork {
+    background-color: var(--color-newyork);
+}
+
+.forecast__item--newdelhi {
+    background-color: var(--color-newdelhi);
+}
+
+.forecast__item--sanfrancisco {
+    background-color: var(--color-sanfrancisco);
+}
+
+.forecast__item--tokyo {
+    background-color: var(--color-tokyo);
+}
+
+.forecast__item--sydney {
+    background-color: var(--color-sydney);
+}
+
+.footer {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    /* Центрування та відступ зверху */
+    text-align: center;
+}
+
+.footer__text {
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.9;
+}

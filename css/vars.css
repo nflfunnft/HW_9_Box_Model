@@ -1,0 +1,22 @@
+:root {
+    /* Кольори міст */
+    --color-lisbon: #5DADE2;
+    --color-paris: #76D7C4;
+    --color-belgrade: #BB8FCE;
+    --color-venice: #CD6155;
+    --color-telaviv: #EC7063;
+    --color-cair: #F8C471;
+    --color-newyork: #ABEBC6;
+    --color-newdelhi: #95A5A6;
+    --color-sanfrancisco: #D98FB3;
+    --color-tokyo: #73C6B6;
+    --color-sydney: #9B95C9;
+
+    /* Кольори фону */
+    --bg-main: #3498DB;
+    --bg-container: rgba(52, 152, 219, 0.3);
+
+    /* Бордери */
+    --border-color: #FFFFFF;
+    --border-width: 4px;
+}
