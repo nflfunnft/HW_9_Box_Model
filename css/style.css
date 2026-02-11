@@ -1,11 +1,12 @@
 /* ============================================
-   RESET & BASE
+   ОБНУЛЕННЯ ТА БАЗОВІ СТИЛІ
    ============================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Важливо для розрахунку ширини з бордерами */
+    /* анімація згідно завдання LMS */
+    transition: all 0.1s ease-in;
 }
 
 body {
@@ -16,13 +17,12 @@ body {
 }
 
 /* ============================================
-   CONTAINER (Вирівнювання всього блоку по центру екрана)
+   КОНТЕЙНЕР  1166px
    ============================================ */
 .container {
-    max-width: 1440px;
+    max-width: 1166px;
     margin: 0 auto;
     text-align: left;
-    /* Текст навколо сітки стоїть зліва */
 }
 
 /* ============================================
@@ -33,7 +33,7 @@ body {
 }
 
 .header__title {
-    font-size: 32px;
+    font-size: 21px;
     font-weight: 400;
 }
 
@@ -42,43 +42,53 @@ body {
 }
 
 .footer__text {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 300;
 }
 
 /* ============================================
-   FORECAST BLOCK (СІТКА ЧЕРЕЗ UL)
+   БЛОК FORECAST (UL) - ОБМЕЖЕННЯ ВИСОТИ
    ============================================ */
 .forecast {
     list-style: none;
     font-size: 0;
-    /* Прибираємо пробіли між li (inline-block) */
     background: var(--bg-container);
 
-    /* Малюємо верх і ліво сітки */
+    /* ФІКСОВАНА ВИСОТА */
+    height: 588px;
+    overflow: hidden;
+
+    /* Зовнішні межі сітки */
     border-top: var(--border-width) solid var(--border-color);
     border-left: var(--border-width) solid var(--border-color);
 }
 
 /* ============================================
-   FORECAST__ITEM (LI)
+   ЕЛЕМЕНТ FORECAST__ITEM (LI) 588px
    ============================================ */
 .forecast__item {
     display: inline-block;
     vertical-align: top;
     font-size: 16px;
-    /* Повертаємо розмір шрифту */
     text-align: center;
-    padding: 40px 10px;
 
-    /* Кожна li закриває рамку справа і знизу */
+    /* Кожен ряд займає рівно 1/4 висоти (588 / 4 = 147px) */
+    height: 25%;
+    padding: 30px 10px;
+
+    /* Внутрішні межі сітки */
     border-right: var(--border-width) solid var(--border-color);
     border-bottom: var(--border-width) solid var(--border-color);
 
     background-clip: padding-box;
+    cursor: pointer;
 }
 
-/* Модифікатори ширини */
+.forecast__item:hover {
+    opacity: 0.8;
+}
+
+/* МОДИФІКАТОРИ ШИРИНИ  */
 .forecast__item--full {
     width: 100%;
 }
@@ -92,37 +102,37 @@ body {
 }
 
 /* ============================================
-   ВНУТРІШНІ ЕЛЕМЕНТИ
+   ВНУТРІШНІ ЕЛЕМЕНТИ КАРТКИ
    ============================================ */
 .forecast__city {
     display: block;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     letter-spacing: 1px;
 }
 
-.forecast__details {
+.forecast__info {
     display: block;
-    /* Контейнер для температури та іконки */
 }
 
 .forecast__temp {
     display: inline-block;
     vertical-align: middle;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 300;
-    margin-right: 12px;
+    margin-right: 10px;
 }
 
 .forecast__icon {
     display: inline-block;
     vertical-align: middle;
-    font-size: 44px;
+    font-size: 36px;
+    line-height: 1;
 }
 
 /* ============================================
-   COLOR MODIFIERS (з vars.css)
+   МОДИФІКАТОРИ КОЛЬОРІВ (З vars.css)
    ============================================ */
 .forecast__item--lisbon {
     background-color: var(--color-lisbon);
